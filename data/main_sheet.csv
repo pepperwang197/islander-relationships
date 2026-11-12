@@ -1,0 +1,551 @@
+Name,Age,House,City,Island,Birth island,Relationship Length,Married
+Gustave Tamboli,28,587,Maeva,Bonne Sante,Bonne Sante,3,No
+Gustave Tamboli,28,587,Maeva,Bonne Sante,Bonne Sante,8,Yes
+Vidya Shah,92,254,Maeva,Bonne Sante,Buyan,59,Yes
+Vidya Shah,92,254,Maeva,Bonne Sante,Buyan,<1,No
+Sinead Morris,33,646,Maeva,Bonne Sante,Bonne Sante,1,No
+Sinead Morris,33,646,Maeva,Bonne Sante,Bonne Sante,<1,No
+Sinead Morris,33,646,Maeva,Bonne Sante,Bonne Sante,<1,No
+Sinead Morris,33,646,Maeva,Bonne Sante,Bonne Sante,1,No
+Sinead Morris,33,646,Maeva,Bonne Sante,Bonne Sante,1,No
+Sinead Morris,33,646,Maeva,Bonne Sante,Bonne Sante,1,No
+Sinead Morris,33,646,Maeva,Bonne Sante,Bonne Sante,<1,No
+Sinead Morris,33,646,Maeva,Bonne Sante,Bonne Sante,<1,Yes
+Sinead Morris,33,646,Maeva,Bonne Sante,Bonne Sante,9,Yes
+Mathis Mishra,33,112,Maeva,Bonne Sante,Bonne Sante,<1,No
+Mathis Mishra,33,112,Maeva,Bonne Sante,Bonne Sante,<1,No
+Mathis Mishra,33,112,Maeva,Bonne Sante,Bonne Sante,<1,No
+Mathis Mishra,33,112,Maeva,Bonne Sante,Bonne Sante,3,No
+Mathis Mishra,33,112,Maeva,Bonne Sante,Bonne Sante,<1,No
+Mathis Mishra,33,112,Maeva,Bonne Sante,Bonne Sante,1,No
+Mathis Mishra,33,112,Maeva,Bonne Sante,Bonne Sante,<1,No
+Mathis Mishra,33,112,Maeva,Bonne Sante,Bonne Sante,<1,No
+Mathis Mishra,33,112,Maeva,Bonne Sante,Bonne Sante,<1,No
+Mathis Mishra,33,112,Maeva,Bonne Sante,Bonne Sante,<1,No
+Mathis Mishra,33,112,Maeva,Bonne Sante,Bonne Sante,<1,No
+Mathis Mishra,33,112,Maeva,Bonne Sante,Bonne Sante,<1,No
+Mathis Mishra,33,112,Maeva,Bonne Sante,Bonne Sante,2,Yes
+Eden Solberg,38,123,Maeva,Bonne Sante,Bonne Sante,<1,No
+Eden Solberg,38,123,Maeva,Bonne Sante,Bonne Sante,3,No
+Eden Solberg,38,123,Maeva,Bonne Sante,Bonne Sante,20,Yes
+Delaney Sato,50,586,Maeva,Bonne Sante,Providence,<1,No
+Delaney Sato,50,586,Maeva,Bonne Sante,Providence,34,Yes
+Prisha Varadhan,47,304,Maeva,Bonne Sante,Bonne Sante,<1,No
+Prisha Varadhan,47,304,Maeva,Bonne Sante,Bonne Sante,1,No
+Prisha Varadhan,47,304,Maeva,Bonne Sante,Bonne Sante,<1,No
+Prisha Varadhan,47,304,Maeva,Bonne Sante,Bonne Sante,1,No
+Prisha Varadhan,47,304,Maeva,Bonne Sante,Bonne Sante,1,No
+Prisha Varadhan,47,304,Maeva,Bonne Sante,Bonne Sante,<1,No
+Prisha Varadhan,47,304,Maeva,Bonne Sante,Bonne Sante,<1,No
+Prisha Varadhan,47,304,Maeva,Bonne Sante,Bonne Sante,<1,No
+Prisha Varadhan,47,304,Maeva,Bonne Sante,Bonne Sante,<1,No
+Prisha Varadhan,47,304,Maeva,Bonne Sante,Bonne Sante,<1,No
+Prisha Varadhan,47,304,Maeva,Bonne Sante,Bonne Sante,<1,No
+Prisha Varadhan,47,304,Maeva,Bonne Sante,Bonne Sante,<1,No
+Naadir Chandra,45,122,Maeva,Bonne Sante,Bonne Sante,<1,No
+Naadir Chandra,45,122,Maeva,Bonne Sante,Bonne Sante,3,No
+Naadir Chandra,45,122,Maeva,Bonne Sante,Bonne Sante,25,Yes
+Mahika Saha,66,290,Maeva,Bonne Sante,Bonne Sante,<1,No
+Mahika Saha,66,290,Maeva,Bonne Sante,Bonne Sante,51,Yes
+Rushil Tamboli,54,422,Maeva,Bonne Sante,Bonne Sante,3,No
+Rushil Tamboli,54,422,Maeva,Bonne Sante,Bonne Sante,<1,No
+Rushil Tamboli,54,422,Maeva,Bonne Sante,Bonne Sante,27,Yes
+Mitchell Yamada,36,952,Arcadia ,Providence,Providence,1,No
+Mitchell Yamada,36,952,Arcadia ,Providence,Providence,15,Yes
+Aimon Connolly,49,610,Arcadia ,Providence,Providence,<1,No
+Aimon Connolly,49,610,Arcadia ,Providence,Providence,7,No
+Aimon Connolly,49,610,Arcadia ,Providence,Providence,<1,No
+Justin Sato,41,750,Arcadia ,Providence,Bonne Sante,<1,No
+Justin Sato,41,750,Arcadia ,Providence,Bonne Sante,<1,No
+Justin Sato,41,750,Arcadia ,Providence,Bonne Sante,<1,No
+Justin Sato,41,750,Arcadia ,Providence,Bonne Sante,<1,No
+Justin Sato,41,750,Arcadia ,Providence,Bonne Sante,<1,No
+Justin Sato,41,750,Arcadia ,Providence,Bonne Sante,21,Yes
+Mishka Gadhavi,34,1876,Arcadia ,Providence,Ironbard,4,No
+Mishka Gadhavi,34,1876,Arcadia ,Providence,Ironbard,1,No
+Mishka Gadhavi,34,1876,Arcadia ,Providence,Ironbard,<1,No
+Mishka Gadhavi,34,1876,Arcadia ,Providence,Ironbard,<1,No
+Mishka Gadhavi,34,1876,Arcadia ,Providence,Ironbard,<1,No
+Mishka Gadhavi,34,1876,Arcadia ,Providence,Ironbard,<1,No
+Mishka Gadhavi,34,1876,Arcadia ,Providence,Ironbard,6,Yes
+Isabella Kimura,31,1798,Arcadia ,Providence,Providence,<1,No
+Isabella Kimura,31,1798,Arcadia ,Providence,Providence,<1,No
+Isabella Kimura,31,1798,Arcadia ,Providence,Providence,<1,No
+Isabella Kimura,31,1798,Arcadia ,Providence,Providence,<1,No
+Isabella Kimura,31,1798,Arcadia ,Providence,Providence,<1,No
+Tobias Solberg,53,1543,Arcadia ,Providence,Providence,<1,No
+Tobias Solberg,53,1543,Arcadia ,Providence,Providence,<1,No
+Tobias Solberg,53,1543,Arcadia ,Providence,Providence,<1,No
+Tobias Solberg,53,1543,Arcadia ,Providence,Providence,<1,No
+Tobias Solberg,53,1543,Arcadia ,Providence,Providence,10,Yes
+Blaise Suzuki,42,775,Arcadia ,Providence,Providence,3,No
+Blaise Suzuki,42,775,Arcadia ,Providence,Providence,<1,No
+Blaise Suzuki,42,775,Arcadia ,Providence,Providence,1,Yes
+Karen Bager,41,1329,Arcadia ,Providence,Providence,<1,No
+Karen Bager,41,1329,Arcadia ,Providence,Providence,<1,No
+Karen Bager,41,1329,Arcadia ,Providence,Providence,<1,No
+Karen Bager,41,1329,Arcadia ,Providence,Providence,<1,No
+Karen Bager,41,1329,Arcadia ,Providence,Providence,10,Yes
+Jamie Collins,35,402,Arcadia ,Providence,Providence,2,No
+Jamie Collins,35,402,Arcadia ,Providence,Providence,<1,No
+Jamie Collins,35,402,Arcadia ,Providence,Providence,<1,No
+Jamie Collins,35,402,Arcadia ,Providence,Providence,1,Yes
+Olivier Basu,25,1326,Arcadia ,Providence,Bonne Sante,<1,No
+Joaquim Lemoine,50,211,Arcadia ,Providence,Providence,<1,No
+Joaquim Lemoine,50,211,Arcadia ,Providence,Providence,<1,No
+Joaquim Lemoine,50,211,Arcadia ,Providence,Providence,<1,No
+Joaquim Lemoine,50,211,Arcadia ,Providence,Providence,<1,No
+Joaquim Lemoine,50,211,Arcadia ,Providence,Providence,<1,No
+Joaquim Lemoine,50,211,Arcadia ,Providence,Providence,<1,No
+Joaquim Lemoine,50,211,Arcadia ,Providence,Providence,1,No
+Joaquim Lemoine,50,211,Arcadia ,Providence,Providence,<1,No
+Joaquim Lemoine,50,211,Arcadia ,Providence,Providence,<1,No
+Joaquim Lemoine,50,211,Arcadia ,Providence,Providence,<1,No
+Joaquim Lemoine,50,211,Arcadia ,Providence,Providence,<1,No
+Joaquim Lemoine,50,211,Arcadia ,Providence,Providence,29,No
+Torsten Thorn,32,179,Helvig,Ironbard,Ironbard,6,No
+Torsten Thorn,32,179,Helvig,Ironbard,Ironbard,15,Yes
+Leira Holst,61,284,Helvig,Ironbard,Ironbard,<1,No
+Leira Holst,61,284,Helvig,Ironbard,Ironbard,<1,No
+Leira Holst,61,284,Helvig,Ironbard,Ironbard,<1,No
+Leira Holst,61,284,Helvig,Ironbard,Ironbard,<1,No
+Leira Holst,61,284,Helvig,Ironbard,Ironbard,<1,No
+Leira Holst,61,284,Helvig,Ironbard,Ironbard,29,Yes
+Leira Holst,61,284,Helvig,Ironbard,Ironbard,<1,No
+Leira Holst,61,284,Helvig,Ironbard,Ironbard,<1,No
+Leira Holst,61,284,Helvig,Ironbard,Ironbard,<1,No
+Eliane Brun,34,255,Helvig,Ironbard,Ironbard,<1,No
+Eliane Brun,34,255,Helvig,Ironbard,Ironbard,<1,No
+Eliane Brun,34,255,Helvig,Ironbard,Ironbard,11,Yes
+Yvan Pereira,55,129,Helvig,Ironbard,Providence,<1,No
+Yvan Pereira,55,129,Helvig,Ironbard,Providence,<1,No
+Yvan Pereira,55,129,Helvig,Ironbard,Providence,40,Yes
+James Hall,59,152,Helvig,Ironbard,Providence,4,No
+James Hall,59,152,Helvig,Ironbard,Providence,<1,No
+James Hall,59,152,Helvig,Ironbard,Providence,25,Yes
+James Hall,59,152,Helvig,Ironbard,Providence,<1,No
+Ebbe Sorensen,18,358,Helvig,Ironbard,Ironbard,<1,No
+Ebbe Sorensen,18,358,Helvig,Ironbard,Ironbard,4,No
+Lucia Solberg,63,553,Helvig,Ironbard,Ironbard,<1,No
+Lucia Solberg,63,553,Helvig,Ironbard,Ironbard,<1,No
+Lucia Solberg,63,553,Helvig,Ironbard,Ironbard,<1,No
+Lucia Solberg,63,553,Helvig,Ironbard,Ironbard,<1,No
+Lucia Solberg,63,553,Helvig,Ironbard,Ironbard,1,No
+Lucia Solberg,63,553,Helvig,Ironbard,Ironbard,45,Yes
+Agda Solberg,58,436,Helvig,Ironbard,Ironbard,3,No
+Agda Solberg,58,436,Helvig,Ironbard,Ironbard,1,No
+Agda Solberg,58,436,Helvig,Ironbard,Ironbard,<1,No
+Agda Solberg,58,436,Helvig,Ironbard,Ironbard,<1,No
+Agda Solberg,58,436,Helvig,Ironbard,Ironbard,37,Yes
+Olson Sorensen,59,5,Helvig,Ironbard,Ironbard,<1,No
+Olson Sorensen,59,5,Helvig,Ironbard,Ironbard,28,No
+Svenja Kern,64,44,Helvig,Ironbard,Providence,<1,No
+Svenja Kern,64,44,Helvig,Ironbard,Providence,46,Yes
+Juhani Solberg,44,562,Helvig,Ironbard,Ironbard,2,No
+Juhani Solberg,44,562,Helvig,Ironbard,Ironbard,<1,No
+Juhani Solberg,44,562,Helvig,Ironbard,Ironbard,<1,No
+Juhani Solberg,44,562,Helvig,Ironbard,Ironbard,21,Yes
+Elena Ibsen,42,263,Helvig,Ironbard,Ironbard,1,No
+Elena Ibsen,42,263,Helvig,Ironbard,Ironbard,<1,No
+Daniel Ibsen,24,32,Helvig,Ironbard,Ironbard,2,No
+Haru Brown,88,606,Helvig,Ironbard,Ironbard,<1,No
+Haru Brown,88,606,Helvig,Ironbard,Ironbard,4,No
+Haru Brown,88,606,Helvig,Ironbard,Ironbard,52,Yes
+Haru Brown,88,606,Helvig,Ironbard,Ironbard,1,Yes
+Robin Watanabe,52,544,Helvig,Ironbard,Ironbard,<1,No
+Robin Watanabe,52,544,Helvig,Ironbard,Ironbard,<1,No
+Robin Watanabe,52,544,Helvig,Ironbard,Ironbard,<1,No
+Robin Watanabe,52,544,Helvig,Ironbard,Ironbard,<1,No
+Robin Watanabe,52,544,Helvig,Ironbard,Ironbard,<1,No
+Robin Watanabe,52,544,Helvig,Ironbard,Ironbard,<1,No
+Robin Watanabe,52,544,Helvig,Ironbard,Ironbard,<1,No
+Robin Watanabe,52,544,Helvig,Ironbard,Ironbard,28,Yes
+Larisa Patel,60,89,Hofn,Ironbard,Bonne Santé,<1,no
+Larisa Patel,60,89,Hofn,Ironbard,Bonne Santé,28,yes
+Larisa Patel,60,89,Hofn,Ironbard,Bonne Santé,7,yes
+Samantha Collins,18,218,Hofn,Ironbard,Ironbard,<1,no
+Samantha Collins,18,218,Hofn,Ironbard,Ironbard,<1,no
+Samantha Collins,18,218,Hofn,Ironbard,Ironbard,<1,no
+Marine Coste,47,399,Hofn,Ironbard,Providence,2,no
+Marine Coste,47,399,Hofn,Ironbard,Providence,2,no
+Marine Coste,47,399,Hofn,Ironbard,Providence,30,yes
+Alexander Olsen,38,598,Hofn,Ironbard,Providence,<1,no
+Alexander Olsen,38,598,Hofn,Ironbard,Providence,<1,no
+Alexander Olsen,38,598,Hofn,Ironbard,Providence,<1,no
+Alexander Olsen,38,598,Hofn,Ironbard,Providence,<1,no
+Alexander Olsen,38,598,Hofn,Ironbard,Providence,<1,no
+Alexander Olsen,38,598,Hofn,Ironbard,Providence,<1,no
+Alexander Olsen,38,598,Hofn,Ironbard,Providence,<1,no
+Alexander Olsen,38,598,Hofn,Ironbard,Providence,<1,no
+Alexander Olsen,38,598,Hofn,Ironbard,Providence,<1,no
+Alexander Olsen,38,598,Hofn,Ironbard,Providence,<1,no
+Mia Larsen,56,677,Hofn,Ironbard,Providence,<1,no
+Mia Larsen,56,677,Hofn,Ironbard,Providence,<1,no
+Mia Larsen,56,677,Hofn,Ironbard,Providence,<1,no
+Mia Larsen,56,677,Hofn,Ironbard,Providence,<1,no
+Mia Larsen,56,677,Hofn,Ironbard,Providence,35,yes
+Jasmine Morris,26,689,Hofn,Ironbard,Ironbard,7,no
+Jasmine Morris,26,689,Hofn,Ironbard,Ironbard,<1,no
+Jasmine Morris,26,689,Hofn,Ironbard,Ironbard,<1,no
+Jasmine Morris,26,689,Hofn,Ironbard,Ironbard,<1,no
+Jasmine Morris,26,689,Hofn,Ironbard,Ironbard,6,yes
+Francesca Sato,40,882,Hofn,Ironbard,Ironbard,<1,no
+Francesca Sato,40,882,Hofn,Ironbard,Ironbard,<1,no
+Francesca Sato,40,882,Hofn,Ironbard,Ironbard,<1,no
+Francesca Sato,40,882,Hofn,Ironbard,Ironbard,<1,no
+Francesca Sato,40,882,Hofn,Ironbard,Ironbard,<1,no
+Francesca Sato,40,882,Hofn,Ironbard,Ironbard,21,yes
+Marcus Yamada,30,891,Hofn,Ironbard,Ironbard,15,yes
+Gerda Solberg,48,908,Hofn,Ironbard,Ironbard,<1,no
+Gerda Solberg,48,908,Hofn,Ironbard,Ironbard,<1,no
+Gerda Solberg,48,908,Hofn,Ironbard,Ironbard,23,yes
+Henrik Solberg,28,991,Hofn,Ironbard,Ironbard,14,yes
+Mirette Blomgren,26,263,Reading,Providence,Providence,<1,no
+Ole Eklund,25,342,Reading,Providence,Providence,<1,no
+Ole Eklund,25,342,Reading,Providence,Providence,<1,no
+Ole Eklund,25,342,Reading,Providence,Providence,3,yes
+Markus Nagel,39,480,Reading,Providence,Providence,3,no
+Markus Nagel,39,480,Reading,Providence,Providence,20,yes
+Kazuya Moore,42,546,Reading,Providence,Providence,<1,no
+Kazuya Moore,42,546,Reading,Providence,Providence,<1,no
+Kazuya Moore,42,546,Reading,Providence,Providence,24,yes
+Michael Blomgren,36,639,Reading,Providence,Providence,<1,no
+Michael Blomgren,36,639,Reading,Providence,Providence,4,no
+Michael Blomgren,36,639,Reading,Providence,Providence,16,yes
+Hannah Erickson,67,720,Reading,Providence,Bonne Santé,5,no
+Hannah Erickson,67,720,Reading,Providence,Bonne Santé,<1,no
+Hannah Erickson,67,720,Reading,Providence,Bonne Santé,30,yes
+Hannah Erickson,67,720,Reading,Providence,Bonne Santé,<1,no
+Hannah Erickson,67,720,Reading,Providence,Bonne Santé,13,yes
+Luc Lamy,39,798,Reading,Providence,Providence,<1,no
+Lila Collins,19,847,Reading,Providence,Providence,4,no
+Lila Collins,19,847,Reading,Providence,Providence,<1,no
+Lila Collins,19,847,Reading,Providence,Providence,<1,no
+Lila Collins,19,847,Reading,Providence,Providence,<1,no
+Lila Collins,19,847,Reading,Providence,Providence,<1,no
+Sarah McCarthy,19,884,Reading,Providence,Providence,<1,no
+Sarah McCarthy,19,884,Reading,Providence,Providence,2,no
+Harvey Agarwal,33,154,Mahuti,Bonne Santé,Bonne Santé,<1,no
+Harvey Agarwal,33,154,Mahuti,Bonne Santé,Bonne Santé,<1,no
+Harvey Agarwal,33,154,Mahuti,Bonne Santé,Bonne Santé,<1,no
+Harvey Agarwal,33,154,Mahuti,Bonne Santé,Bonne Santé,<1,no
+Harvey Agarwal,33,154,Mahuti,Bonne Santé,Bonne Santé,15,yes
+Mimi Kimura,22,225,Mahuti,Bonne Santé,Bonne Santé,<1,no
+Janette Watt,70,262,Mahuti,Bonne Santé,Providence,<1,no
+Janette Watt,70,262,Mahuti,Bonne Santé,Providence,<1,no
+Janette Watt,70,262,Mahuti,Bonne Santé,Providence,<1,no
+Janette Watt,70,262,Mahuti,Bonne Santé,Providence,5,yes
+Janette Watt,70,262,Mahuti,Bonne Santé,Providence,46,yes
+Agda Solberg,37,321,Mahuti,Bonne Santé,Providence,20,yes
+Elise Morris,65,362,Mahuti,Bonne Santé,Bonne Santé,<1,no
+Elise Morris,65,362,Mahuti,Bonne Santé,Bonne Santé,<1,no
+Elise Morris,65,362,Mahuti,Bonne Santé,Bonne Santé,<1,no
+Elise Morris,65,362,Mahuti,Bonne Santé,Bonne Santé,<1,no
+Elise Morris,65,362,Mahuti,Bonne Santé,Bonne Santé,<1,no
+Elise Morris,65,362,Mahuti,Bonne Santé,Bonne Santé,<1,no
+Elise Morris,65,362,Mahuti,Bonne Santé,Bonne Santé,39,yes
+Aveline Bahadur,18,407,Mahuti,Bonne Santé,Bonne Santé,<1,no
+Aveline Bahadur,18,407,Mahuti,Bonne Santé,Bonne Santé,<1,no
+Olivier McCarthy,61,502,Mahuti,Bonne Santé,Bonne Santé,,
+Sophie Zaman,44,829,Mahuti,Bonne Santé,Bonne Santé,<1,no
+Lila Edwards,22,926,Mahuti,Bonne Santé,Bonne Santé,<1,no
+Lila Edwards,22,926,Mahuti,Bonne Santé,Bonne Santé,<1,no
+Lila Edwards,22,926,Mahuti,Bonne Santé,Bonne Santé,<1,no
+Lila Edwards,22,926,Mahuti,Bonne Santé,Bonne Santé,4,yes
+Jeremy Page,41,1227,Mahuti,Bonne Santé,Bonne Santé,<1,no
+Jeremy Page,41,1227,Mahuti,Bonne Santé,Bonne Santé,<1,no
+Jeremy Page,41,1227,Mahuti,Bonne Santé,Bonne Santé,<1,no
+Jeremy Page,41,1227,Mahuti,Bonne Santé,Bonne Santé,<1,no
+Jeremy Page,41,1227,Mahuti,Bonne Santé,Bonne Santé,14,yes
+Pierre Blomgren,21,259,Hofn,Ironbard,Ironbard,8 days,no
+Pierre Blomgren,21,259,Hofn,Ironbard,Ironbard,16 days,no
+Pierre Blomgren,21,259,Hofn,Ironbard,Ironbard,4 days,no
+Pierre Blomgren,21,259,Hofn,Ironbard,Ironbard,54+ days (current),yes
+Connor Jackson,18,1104,Hofn,Ironbard,Ironbard,62 days (>2 years),no
+Connor Jackson,18,1104,Hofn,Ironbard,Ironbard,5 days,no
+Connor Jackson,18,1104,Hofn,Ironbard,Ironbard,85+ days (current),no
+Viktoria Blomgren,57,883,Hofn,Ironbard,Providence,171 days (>6 years),no
+Viktoria Blomgren,57,883,Hofn,Ironbard,Providence,39+ years (current),yes
+Sebastian Sorensen,47,506,Hofn,Ironbard,Ironbard,170 days (>6 years),no
+Sebastian Sorensen,47,506,Hofn,Ironbard,Ironbard,3 days,no
+Sebastian Sorensen,47,506,Hofn,Ironbard,Ironbard,27+ years (current),yes
+Paige McCarthy,44,270,Hofn,Ironbard,Ironbard,11 days,no
+Paige McCarthy,44,270,Hofn,Ironbard,Ironbard,105 days (<4 years),no
+Paige McCarthy,44,270,Hofn,Ironbard,Ironbard,>23 years,yes
+Taylor Regan,63,460,Hofn,Ironbard,Ironbard,61 days (>2 years),no
+Taylor Regan,63,460,Hofn,Ironbard,Ironbard,9 days,no
+Taylor Regan,63,460,Hofn,Ironbard,Ironbard,1 day,no
+Soren Blomgren,20,1017,Hofn,Ironbard,Ironbard,103 days (>3 years),no
+Soren Blomgren,20,1017,Hofn,Ironbard,Ironbard,11 days,no
+Samantha McCarthy,50,642,Hofn,Ironbard,Ironbard,3 days,no
+Samantha McCarthy,50,642,Hofn,Ironbard,Ironbard,>4 years,no
+Samantha McCarthy,50,642,Hofn,Ironbard,Ironbard,<24 years,yes
+Stefanie Becker,30,73,Hofn,Ironbard,Ironbard,16 days,no
+Stefanie Becker,30,73,Hofn,Ironbard,Ironbard,12 days,no
+Stefanie Becker,30,73,Hofn,Ironbard,Ironbard,>15 years,yes
+Ingrid Reuter,51,42,Hofn,Ironbard,Providence,2 days,no
+Ingrid Reuter,51,42,Hofn,Ironbard,Providence,10 days,no
+Ingrid Reuter,51,42,Hofn,Ironbard,Providence,<1 day,no
+Ingrid Reuter,51,42,Hofn,Ironbard,Providence,<1 day,no
+Ingrid Reuter,51,42,Hofn,Ironbard,Providence,5 days,no
+Ingrid Reuter,51,42,Hofn,Ironbard,Providence,77 days (<3 years),no
+Ingrid Reuter,51,42,Hofn,Ironbard,Providence,77 days (<3 years),no
+Corinne Bager,37,27,Biruwa,Providence,Providence,13 days,no
+Corinne Bager,37,27,Biruwa,Providence,Providence,8 days,no
+Corinne Bager,37,27,Biruwa,Providence,Providence,10 days,no
+Corinne Bager,37,27,Biruwa,Providence,Providence,1 day,no
+Corinne Bager,37,27,Biruwa,Providence,Providence,<1 day,no
+Georgie Ritchie,56,414,Biruwa,Providence,Providence,49 days,no
+Georgie Ritchie,56,414,Biruwa,Providence,Providence,5 days,no 
+Georgie Ritchie,56,414,Biruwa,Providence,Providence,<37 years,yes
+Mirai Laha,56,544,Biruwa,Providence,Providence,4 days,no
+Mirai Laha,56,544,Biruwa,Providence,Providence,<1 day,no
+Mirai Laha,56,544,Biruwa,Providence,Providence,10 days,no
+Mirai Laha,56,544,Biruwa,Providence,Providence,2 days,no
+Mirai Laha,56,544,Biruwa,Providence,Providence,2 days,no
+Mirai Laha,56,544,Biruwa,Providence,Providence,<1 day,no
+Mirai Laha,56,544,Biruwa,Providence,Providence,2 days,no
+Mirai Laha,56,544,Biruwa,Providence,Providence,2 days,no
+Devya Kulkarni,24,33,Biruwa,Providence,Providence,60 days,no
+Devya Kulkarni,24,33,Biruwa,Providence,Providence,5 days,no
+Devya Kulkarni,24,33,Biruwa,Providence,Providence,<1 day,no
+Devya Kulkarni,24,33,Biruwa,Providence,Providence,8+ years (current),yes
+Henrik Carlsen,19,638,Biruwa,Providence,Providence,8 days,no
+Henrik Carlsen,19,638,Biruwa,Providence,Providence,1 day,no
+Henrik Carlsen,19,638,Biruwa,Providence,Providence,65+ days (current),yes
+Rosalind Sorensen,55,289,Biruwa,Providence,Providence,6 days,no
+Rosalind Sorensen,55,289,Biruwa,Providence,Providence,<1 day,no
+Rosalind Sorensen,55,289,Biruwa,Providence,Providence,1 day,no
+Rosalind Sorensen,55,289,Biruwa,Providence,Providence,4 days,no
+Rosalind Sorensen,55,289,Biruwa,Providence,Providence,2 days,no
+Rosalind Sorensen,55,289,Biruwa,Providence,Providence,12 days,no
+Rosalind Sorensen,55,289,Biruwa,Providence,Providence,9 days,no
+Rosalind Sorensen,55,289,Biruwa,Providence,Providence,13 days,no
+Rosalind Sorensen,55,289,Biruwa,Providence,Providence,6 days,no
+Rosalind Sorensen,55,289,Biruwa,Providence,Providence,>27 years,yes
+Florian Eklund,70,485,Biruwa,Providence,Providence,>41 years,yes
+Maki Fukuda,25,264,Biruwa,Providence,Providence,13 days,no
+Maki Fukuda,25,264,Biruwa,Providence,Providence,2 days,no
+Maki Fukuda,25,264,Biruwa,Providence,Providence,4 days,no
+Maki Fukuda,25,264,Biruwa,Providence,Providence,7 days,no
+Maki Fukuda,25,264,Biruwa,Providence,Providence,5 days,no
+Maki Fukuda,25,264,Biruwa,Providence,Providence,3 days,no
+Maki Fukuda,25,264,Biruwa,Providence,Providence,1 day,no
+Elsa Sorensen,41,129,Biruwa,Providence,Providence,7 days,no
+Elsa Sorensen,41,129,Biruwa,Providence,Providence,8 days,no
+Elsa Sorensen,41,129,Biruwa,Providence,Providence,6 days,no
+Elsa Sorensen,41,129,Biruwa,Providence,Providence,25+ years (current),yes
+Francois Morris,34,261,Biruwa,Providence,Providence,20+ years (current),yes
+Gayan Babu,74,169,Talu,Bonne Sante,Providence,59+ years (current),yes
+Kaeda Hall,66,164,Talu,Bonne Sante,Bonne Sante,14 days,no
+Kaeda Hall,66,164,Talu,Bonne Sante,Bonne Sante,45 days,no
+Kaeda Hall,66,164,Talu,Bonne Sante,Bonne Sante,2 days,no
+Kaeda Hall,66,164,Talu,Bonne Sante,Bonne Sante,23 days,no
+Kaeda Hall,66,164,Talu,Bonne Sante,Bonne Sante,<1 day,no
+Kaeda Hall,66,164,Talu,Bonne Sante,Bonne Sante,>24 years,no
+Kaeda Hall,66,164,Talu,Bonne Sante,Bonne Sante,<1 day,no
+Nathan Ito,58,396,Talu,Bonne Sante,Providence,5 days,no
+Nathan Ito,58,396,Talu,Bonne Sante,Providence,17 days,no
+Nathan Ito,58,396,Talu,Bonne Sante,Providence,7 days,no
+Nathan Ito,58,396,Talu,Bonne Sante,Providence,166 days (>4 years),no
+Nathan Ito,58,396,Talu,Bonne Sante,Providence,451 days (>16 years),yes
+Nathan Ito,58,396,Talu,Bonne Sante,Providence,36+ days (current),sorta
+Justine Eklund,24,233,Talu,Bonne Sante,Bonne Sante,11 days ,no
+Justine Eklund,24,233,Talu,Bonne Sante,Bonne Sante,8+ years (current),yes
+Alexia Shah,24,35,Talu,Bonne Sante,Bonne Sante,25 days,no
+Alexia Shah,24,35,Talu,Bonne Sante,Bonne Sante,8 days,no
+Alexia Shah,24,35,Talu,Bonne Sante,Bonne Sante,19 days,no
+Alexia Shah,24,35,Talu,Bonne Sante,Bonne Sante,4+ years (current),yes
+Marshall Kimura,25,341,Talu,Bonne Sante,Providence,5 days,no
+Marshall Kimura,25,341,Talu,Bonne Sante,Providence,20 days,no
+Marshall Kimura,25,341,Talu,Bonne Sante,Providence,66 days (>2 years),no
+Marshall Kimura,25,341,Talu,Bonne Sante,Providence,4+ years (current),yes
+Ayann Mangal,74,325,Talu,Bonne Sante,Bonne Sante,1 day,no
+Ayann Mangal,74,325,Talu,Bonne Sante,Bonne Sante,<1 day,no
+Ayann Mangal,74,325,Talu,Bonne Sante,Bonne Sante,2 days,no
+Ayann Mangal,74,325,Talu,Bonne Sante,Bonne Sante,4 days,no
+Ayann Mangal,74,325,Talu,Bonne Sante,Bonne Sante,7 days,no
+Ayann Mangal,74,325,Talu,Bonne Sante,Bonne Sante,1 day,no
+Ayann Mangal,74,325,Talu,Bonne Sante,Bonne Sante,68+ years (current),yes
+Patrice Watanabe,22,553,Talu,Bonne Sante,Bonne Sante,3 days,no
+Patrice Watanabe,22,553,Talu,Bonne Sante,Bonne Sante,71 days (>2 years),no
+Patrice Watanabe,22,553,Talu,Bonne Sante,Bonne Sante,6 days,no
+Asmee Chaudhuri,21,310,Talu,Bonne Sante,Bonne Sante,4 days,no
+Asmee Chaudhuri,21,310,Talu,Bonne Sante,Bonne Sante,20 days,no
+Asmee Chaudhuri,21,310,Talu,Bonne Sante,Bonne Sante,43 days,no
+Asmee Chaudhuri,21,310,Talu,Bonne Sante,Bonne Sante,11 days,no
+Asmee Chaudhuri,21,310,Talu,Bonne Sante,Bonne Sante,3 days,no
+Asmee Chaudhuri,21,310,Talu,Bonne Sante,Bonne Sante,6 days,no
+Asmee Chaudhuri,21,310,Talu,Bonne Sante,Bonne Sante,14 days,no
+Asmee Chaudhuri,21,310,Talu,Bonne Sante,Bonne Sante,64+ days (current),yes
+Bhajan Chaudhuri,22,603,Talu,Bonne Sante,Bonne Sante,109 days (<4 years),no
+Bhajan Chaudhuri,22,603,Talu,Bonne Sante,Bonne Sante,52 days,no
+Bhajan Chaudhuri,22,603,Talu,Bonne Sante,Bonne Sante,<1 day,no
+Bhajan Chaudhuri,22,603,Talu,Bonne Sante,Bonne Sante,14 days,no
+Bhajan Chaudhuri,22,603,Talu,Bonne Sante,Bonne Sante,64+ days (current),yes
+Mahika Zaman,41,79,Vardo,Ironbard,Ironbard,<1,no
+Mahika Zaman,41,79,Vardo,Ironbard,Ironbard,<1,no
+Mahika Zaman,41,79,Vardo,Ironbard,Ironbard,25,yes
+Henrik Blomgren,31,98,Vardo,Ironbard,Ironbard,<1,no
+Henrik Blomgren,31,98,Vardo,Ironbard,Ironbard,<1,no
+Henrik Blomgren,31,98,Vardo,Ironbard,Ironbard,<1,no
+Henrik Blomgren,31,98,Vardo,Ironbard,Ironbard,<1,no
+Henrik Blomgren,31,98,Vardo,Ironbard,Ironbard,9,yes
+Joji Sugiyama,47,131,Vardo,Ironbard,Ironbard,<1,no
+Joji Sugiyama,47,131,Vardo,Ironbard,Ironbard,<1,no
+Joji Sugiyama,47,131,Vardo,Ironbard,Ironbard,<1,no
+Joji Sugiyama,47,131,Vardo,Ironbard,Ironbard,<1,no
+Joji Sugiyama,47,131,Vardo,Ironbard,Ironbard,<1,no
+Joji Sugiyama,47,131,Vardo,Ironbard,Ironbard,20,yes
+Rahas Bhatt,63,166,Vardo,Ironbard,Ironbard,none,no
+Gemma Wilson,46,245,Vardo,Ironbard,Ironbard,<1,no
+Gemma Wilson,46,245,Vardo,Ironbard,Ironbard,3,no
+Gemma Wilson,46,245,Vardo,Ironbard,Ironbard,<1,no
+Gemma Wilson,46,245,Vardo,Ironbard,Ironbard,1,no
+Gemma Wilson,46,245,Vardo,Ironbard,Ironbard,26,yes
+Kelda Eklund,31,504,Vardo,Ironbard,Ironbard,16,yes
+Pia Bahadur,32,515,Vardo,Ironbard,Ironbard,4,no
+Pia Bahadur,32,515,Vardo,Ironbard,Ironbard,1,no
+Pia Bahadur,32,515,Vardo,Ironbard,Ironbard,<1,no
+Pia Bahadur,32,515,Vardo,Ironbard,Ironbard,5,no
+Pia Bahadur,32,515,Vardo,Ironbard,Ironbard,<1,no
+Paul Bager,26,602,Vardo,Ironbard,Ironbard,<1,no
+Kento Ando,64,629,Vardo,Ironbard,Providence,<1,no
+Kento Ando,64,629,Vardo,Ironbard,Providence,<1,no
+Kento Ando,64,629,Vardo,Ironbard,Providence,<1,no
+Kento Ando,64,629,Vardo,Ironbard,Providence,<1,no
+Kento Ando,64,629,Vardo,Ironbard,Providence,34,yes
+Meg Collins,40,658,Vardo,Ironbard,Ironbard,<1,no
+Meg Collins,40,658,Vardo,Ironbard,Ironbard,<1,no
+Meg Collins,40,658,Vardo,Ironbard,Ironbard,1,no
+Meg Collins,40,658,Vardo,Ironbard,Ironbard,<1,no
+Meg Collins,40,658,Vardo,Ironbard,Ironbard,<1,no
+Meg Collins,40,658,Vardo,Ironbard,Ironbard,<1,no
+Meg Collins,40,658,Vardo,Ironbard,Ironbard,<1,no
+Meg Collins,40,658,Vardo,Ironbard,Ironbard,1,no
+Meg Collins,40,658,Vardo,Ironbard,Ironbard,<1,no
+Meg Collins,40,658,Vardo,Ironbard,Ironbard,21,yes
+Magnar Sorensen,56,670,Vardo,Ironbard,Ironbard,<1,no
+Magnar Sorensen,56,670,Vardo,Ironbard,Ironbard,32,yes
+Fabian Eklund,38,717,Vardo,Ironbard,Ironbard,<1,no
+Fabian Eklund,38,717,Vardo,Ironbard,Ironbard,<1,no
+Fabian Eklund,38,717,Vardo,Ironbard,Ironbard,<1,no
+Fabian Eklund,38,717,Vardo,Ironbard,Ironbard,<1,no
+Fabian Eklund,38,717,Vardo,Ironbard,Ironbard,<1,no
+Fabian Eklund,38,717,Vardo,Ironbard,Ironbard,<1,no
+Fabian Eklund,38,717,Vardo,Ironbard,Ironbard,<1,no
+Husaam Gadhavi,37,723,Vardo,Ironbard,Ironbard,none,no
+Rahas Puri,73,100,Kyobico,Providence,unknown,<1,no
+Rahas Puri,73,100,Kyobico,Providence,unknown,1,no
+Rahas Puri,73,100,Kyobico,Providence,unknown,<1,no
+Rahas Puri,73,100,Kyobico,Providence,unknown,29,yes
+Hendrik Maus,26,138,Kiyobico,Providence,Providence,<1,no
+Hendrik Maus,26,138,Kiyobico,Providence,Providence,<1,no
+Hendrik Maus,26,138,Kiyobico,Providence,Providence,<1,no
+Hendrik Maus,26,138,Kiyobico,Providence,Providence,<1,no
+Hendrik Maus,26,138,Kiyobico,Providence,Providence,<1,no
+Hendrik Maus,26,138,Kiyobico,Providence,Providence,12,yes
+Etienne Jacobsen,20,263,Kiyobico,Providence,Providence,3,no
+Emma Blomgren,41,282,Kiyobico,Providence,Providence,6,no
+Emma Blomgren,41,282,Kiyobico,Providence,Providence,<1,no
+Emma Blomgren,41,282,Kiyobico,Providence,Providence,<1,no
+Emma Blomgren,41,282,Kiyobico,Providence,Providence,22,yes
+Olina Solberg,36,312,Kiyobico,Providence,Providence,<1,no
+Olina Solberg,36,312,Kiyobico,Providence,Providence,1,no
+Olina Solberg,36,312,Kiyobico,Providence,Providence,<1,no
+Elias Solberg,18,325,Kiyobico,Providence,Providence,<1,no
+Elias Solberg,18,325,Kiyobico,Providence,Providence,<1,no
+Elias Solberg,18,325,Kiyobico,Providence,Providence,<1,no
+Elias Solberg,18,325,Kiyobico,Providence,Providence,1,no
+Elias Solberg,18,325,Kiyobico,Providence,Providence,<1,no
+Elias Solberg,18,325,Kiyobico,Providence,Providence,<1,no
+Elias Solberg,18,325,Kiyobico,Providence,Providence,1,no
+Elias Solberg,18,325,Kiyobico,Providence,Providence,<1,no
+Kelda Sorensen,38,345,Kiyobico,Providence,Providence,5,no
+Kelda Sorensen,38,345,Kiyobico,Providence,Providence,19,yes
+Christian Ibsen,57,390,Kiyobico,Providence,Providence,1,no
+Christian Ibsen,57,390,Kiyobico,Providence,Providence,3,no
+Christian Ibsen,57,390,Kiyobico,Providence,Providence,<1,no
+Christian Ibsen,57,390,Kiyobico,Providence,Providence,38,yes
+Antoine Gagnon,42,392,Kiyobico,Providence,Providence,<1,no
+Antoine Gagnon,42,392,Kiyobico,Providence,Providence,1,no
+Antoine Gagnon,42,392,Kiyobico,Providence,Providence,<1,no
+Antoine Gagnon,42,392,Kiyobico,Providence,Providence,<1,no
+Antoine Gagnon,42,392,Kiyobico,Providence,Providence,<1,no
+Antoine Gagnon,42,392,Kiyobico,Providence,Providence,16,yes
+Gersende Bahadur,24,461,Kiyobico,Providence,Bonne Sante,<1,no
+Gersende Bahadur,24,461,Kiyobico,Providence,Bonne Sante,<1,no
+Jeanne Devaux,40,483,Kiyobico,Providence,Bonne Sante,<1,no
+Jeanne Devaux,40,483,Kiyobico,Providence,Bonne Sante,1,no
+Jeanne Devaux,40,483,Kiyobico,Providence,Bonne Sante,1,no
+Jeanne Devaux,40,483,Kiyobico,Providence,Bonne Sante,<1,no
+Jeanne Devaux,40,483,Kiyobico,Providence,Bonne Sante,<1,no
+Jeanne Devaux,40,483,Kiyobico,Providence,Bonne Sante,<1,no
+Jeanne Devaux,40,483,Kiyobico,Providence,Bonne Sante,<1,no
+Jeanne Devaux,40,483,Kiyobico,Providence,Bonne Sante,<1,no
+Jeanne Devaux,40,483,Kiyobico,Providence,Bonne Sante,22,yes
+Tineka Sorensen,38,570,Kiyobico,Providence,Providence,<1,no
+Tineka Sorensen,38,570,Kiyobico,Providence,Providence,4,no
+Tineka Sorensen,38,570,Kiyobico,Providence,Providence,19,yes
+Melodie Khan,22,690,Kiyobico,Providence,Providence,<1,no
+Melodie Khan,22,690,Kiyobico,Providence,Providence,<1,no
+Melodie Khan,22,690,Kiyobico,Providence,Providence,<1,no
+Harrison Brown,59,10,Eden,Bonne Sante,Bonne Sante,5,no
+Harrison Brown,59,10,Eden,Bonne Sante,Bonne Sante,40,yes
+Mike Hall,24,39,Eden,Bonne Sante,Bonne Sante,<1,no
+Mike Hall,24,39,Eden,Bonne Sante,Bonne Sante,2,no
+Mike Hall,24,39,Eden,Bonne Sante,Bonne Sante,1,no
+Mike Hall,24,39,Eden,Bonne Sante,Bonne Sante,<1,no
+Mike Hall,24,39,Eden,Bonne Sante,Bonne Sante,6,yes
+Nathan Solberg,32,65,Eden,Bonne Sante,Bonne Sante,5,no
+Nathan Solberg,32,65,Eden,Bonne Sante,Bonne Sante,<1,no
+Nathan Solberg,32,65,Eden,Bonne Sante,Bonne Sante,<1,no
+Nathan Solberg,32,65,Eden,Bonne Sante,Bonne Sante,3,yes
+Mana Tiwari,56,96,Eden,Bonne Sante,Bonne Sante,<1,no
+Mana Tiwari,56,96,Eden,Bonne Sante,Bonne Sante,1,no
+Mana Tiwari,56,96,Eden,Bonne Sante,Bonne Sante,38,yes
+Deepa Bose,71,230,Eden,Bonne Sante,Bonne Sante,4,no
+Deepa Bose,71,230,Eden,Bonne Sante,Bonne Sante,22,yes
+Deepa Bose,71,230,Eden,Bonne Sante,Bonne Sante,29,yes
+Sarah Watanabe,42,256,Eden,Bonne Sante,Bonne Sante,none,no
+Helsa Blomgren,20,511,Eden,Bonne Sante,Bonne Sante,<1,no
+Helsa Blomgren,20,511,Eden,Bonne Sante,Bonne Sante,5,no
+Helsa Blomgren,20,511,Eden,Bonne Sante,Bonne Sante,<1,no
+Helsa Blomgren,20,511,Eden,Bonne Sante,Bonne Sante,<1,no
+Bianca Connolly,37,336,Eden,Bonne Sante,Bonne Sante,<1,no
+Bianca Connolly,37,336,Eden,Bonne Sante,Bonne Sante,<1,no
+Bianca Connolly,37,336,Eden,Bonne Sante,Bonne Sante,<1,no
+Bianca Connolly,37,336,Eden,Bonne Sante,Bonne Sante,1,no
+Bianca Connolly,37,336,Eden,Bonne Sante,Bonne Sante,3,no
+Bianca Connolly,37,336,Eden,Bonne Sante,Bonne Sante,<1,no
+Bianca Connolly,37,336,Eden,Bonne Sante,Bonne Sante,18,yes
+Mythri Achari,47,383,Eden,Bonne Sante,Bonne Sante,3,no
+Mythri Achari,47,383,Eden,Bonne Sante,Bonne Sante,29,yes
+Chahna Zaman,40,441,Eden,Bonne Sante,Bonne Sante,<1,no
+Chahna Zaman,40,441,Eden,Bonne Sante,Bonne Sante,<1,no
+Chahna Zaman,40,441,Eden,Bonne Sante,Bonne Sante,<1,no
+Chahna Zaman,40,441,Eden,Bonne Sante,Bonne Sante,<1,no
+Chahna Zaman,40,441,Eden,Bonne Sante,Bonne Sante,1,no
+Chahna Zaman,40,441,Eden,Bonne Sante,Bonne Sante,<1,no
+Chahna Zaman,40,441,Eden,Bonne Sante,Bonne Sante,17,yes
+Gustave Murphy,50,490,Eden,Bonne Sante,Bonne Sante,<1,no
+Gustave Murphy,50,490,Eden,Bonne Sante,Bonne Sante,<1,no
+Gustave Murphy,50,490,Eden,Bonne Sante,Bonne Sante,<1,no
+Gustave Murphy,50,490,Eden,Bonne Sante,Bonne Sante,<1,no
+Gustave Murphy,50,490,Eden,Bonne Sante,Bonne Sante,13,yes
+Bronwyn Morris,44,541,Eden,Bonne Sante,Bonne Sante,<1,no
+Bronwyn Morris,44,541,Eden,Bonne Sante,Bonne Sante,<1,no
+Bronwyn Morris,44,541,Eden,Bonne Sante,Bonne Sante,1,no
+Bronwyn Morris,44,541,Eden,Bonne Sante,Bonne Sante,<1,no
+Bronwyn Morris,44,541,Eden,Bonne Sante,Bonne Sante,2,no
+Bronwyn Morris,44,541,Eden,Bonne Sante,Bonne Sante,1,no
+Bronwyn Morris,44,541,Eden,Bonne Sante,Bonne Sante,1,no
+Bronwyn Morris,44,541,Eden,Bonne Sante,Bonne Sante,27,yes
+Kamala Agarwal,28,620,Eden,Bonne Sante,Bonne Sante,<1,no
+Kamala Agarwal,28,620,Eden,Bonne Sante,Bonne Sante,<1,no
+Kamala Agarwal,28,620,Eden,Bonne Sante,Bonne Sante,1,no
+Kamala Agarwal,28,620,Eden,Bonne Sante,Bonne Sante,1,no
+Kamala Agarwal,28,620,Eden,Bonne Sante,Bonne Sante,<1,no
+Kamala Agarwal,28,620,Eden,Bonne Sante,Bonne Sante,<1,no
+Kamala Agarwal,28,620,Eden,Bonne Sante,Bonne Sante,<1,no
+Kamala Agarwal,28,620,Eden,Bonne Sante,Bonne Sante,<1,no
