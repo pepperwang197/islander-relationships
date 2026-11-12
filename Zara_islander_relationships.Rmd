@@ -12,7 +12,30 @@ knitr::opts_chunk$set(echo = TRUE)
 ```{r}
 library(tidyverse)
 
-df_raw <- read_csv("~/Documents/Data Science/data-science-FA26/challenges/data/c10 Islanders Study - Zara.csv")
+df_raw <- read_csv("~/Documents/Data Science/islander-relationships/Data Science Islanders Study - MAIN SHEET.csv")
+```
+
+Function to convert unusually formatted dates into standard format
+
+```{r}
+days_per_year <- 28  # A year is 28 days not 365
+
+convert_length <- function(x) {
+  m <- str_match(x, "(\\d+)\\+?\\s*(day|year)")
+  num  <- as.numeric(m[, 2]) # pull out the number
+  unit <- m[, 3] # pull out the unit (day or year)
+  
+  years <- case_when(
+    unit == "day" ~ floor(num / days_per_year),
+    unit == "year" ~ num
+  )
+  
+  case_when(
+    is.na(unit) ~ x, # don't change entries that are already just a number or <1
+    unit == "day" & years < 1 ~ "<1",
+    TRUE ~ as.character(years)
+  )
+}
 ```
 
 ```{r}
@@ -21,14 +44,19 @@ df <- df_raw %>%
     birth_island = `Birth island`,
     relationship_length = `Relationship Length`
   ) %>%
+  mutate(relationship_length = convert_length(relationship_length)) %>% # convert to standard format
   mutate(
     relationship_length = case_when(
       relationship_length == "none" ~ NA_real_,
       relationship_length == "<1" ~ 0.5, # so it shows up on a numerical axis
       TRUE ~ as.numeric(relationship_length)
     ),
-    Married = Married == "yes" | Married == "Yes"
-  )
+    Married = Married == "yes" | Married == "Yes",
+    Island = case_when(
+      Island == "Bonne Santé" ~ "Bonne Sante",
+      TRUE ~ Island
+    )
+    )
 
 df_people <- df %>%
   group_by(Name, Age, House, City, Island) %>%
@@ -39,12 +67,16 @@ df_people <- df %>%
   )
 ```
 
+```{r}
+df$relationship_length
+```
+
 Age distribution on each island
 
 ```{r}
 df %>%
   ggplot(aes(Age, fill = Island)) +
-  geom_histogram(binwidth = 5, color = "white") +
+  geom_histogram(binwidth = 3, color = "white") +
   facet_wrap(~Island, ncol = 1) +
   theme(legend.position = "none")
 ```
@@ -71,11 +103,13 @@ df %>%
 ```
 
 ```{r}
-df %>%
+df_short_rel <- df %>%
   filter(!is.na(relationship_length)) %>%
   mutate(short_rel = relationship_length < 1) %>%
   group_by(Island) %>%
-  summarise(prop_short = mean(short_rel), n = n()) %>%
+  summarise(prop_short = mean(short_rel), n = n())
+
+df_short_rel %>%
   ggplot(aes(Island, prop_short, fill = Island)) +
   geom_col() +
   geom_text(aes(label = paste0("n=", n)), vjust = -0.5) +
