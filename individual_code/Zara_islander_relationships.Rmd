@@ -12,7 +12,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ```{r}
 library(tidyverse)
 
-df_raw <- read_csv("~/Documents/Data Science/islander-relationships/Data Science Islanders Study - MAIN SHEET.csv")
+df_raw <- read_csv("../data/main_sheet.csv")
 ```
 
 Function to convert unusually formatted dates into standard format

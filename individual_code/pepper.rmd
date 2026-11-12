@@ -12,7 +12,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ```{r}
 library(tidyverse)
 
-df_raw <- read_csv("./data/main_sheet.csv")
+df_raw <- read_csv("../data/main_sheet.csv")
 df_raw
 ```
 

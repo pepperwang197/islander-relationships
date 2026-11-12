@@ -98,7 +98,7 @@ The Islands allows you to ask islanders to complete tasks. If you just take meas
 Conduct an EDA on your data. Add as many code chunks as you need. Ensure your EDA gives enough context of the data for us to understand what comes next in this report.
 
 ```{r}
- df_islanders <- read_csv("Islanders_Data.csv")
+ df_islanders <- read_csv("../data/main_sheet.csv")
 
 df_clean <-
   df_islanders %>%
@@ -160,7 +160,6 @@ df_rel %>%
 ```
 
 ```{r}
-
 ```
 
 ```{r}

@@ -114,6 +114,186 @@ While you provided this plan in c08 (Part 1), please include your plan here. In 
 
 ### **q2** EDA
 
+```{r}
+library(tidyverse)
+df_raw <- read_csv("./data/main_sheet.csv")
+```
+
+```{r}
+
+days_per_year <- 28  # A year is 28 days not 365
+
+convert_length <- function(x) {
+  m <- str_match(x, "(\\d+)\\+?\\s*(day|year)")
+  num  <- as.numeric(m[, 2]) # pull out the number
+  unit <- m[, 3] # pull out the unit (day or year)
+  
+  years <- case_when(
+    unit == "day" ~ floor(num / days_per_year),
+    unit == "year" ~ num
+  )
+  
+  case_when(
+    is.na(unit) ~ x, # don't change entries that are already just a number or <1
+    unit == "day" & years < 1 ~ "<1",
+    TRUE ~ as.character(years)
+  )
+}
+
+df <- df_raw %>%
+  rename(
+    birth_island = `Birth island`,
+    relationship_length = `Relationship Length`
+  ) %>%
+  mutate(
+    relationship_length = convert_length(relationship_length),
+    relationship_length = case_when(
+      relationship_length == "none" ~ NA_real_,
+      relationship_length == "<1" ~ 0.5, # so it shows up on a numerical axis
+      TRUE ~ as.numeric(relationship_length)
+    ),
+    Married = Married == "yes" | Married == "Yes",
+    Island = case_when(
+      Island == "Bonne Santé" ~ "Bonne Sante",
+      TRUE ~ Island
+    )
+  )
+
+df_people <- df %>%
+  group_by(Name, Age, House, City, Island, birth_island) %>%
+  summarise(
+    n_relationships = sum(!is.na(relationship_length)),
+    ever_married = any(Married),
+    .groups = "drop"
+  ) |> mutate(
+    age_group = case_when(
+      Age <= 30 ~ "18-30",
+      Age <= 45 ~ "31-45",
+      Age <= 60 ~ "46-60",
+      TRUE ~ "61+"
+    )
+  )
+
+df_people
+
+```
+
+```{r}
+df %>%
+  ggplot(aes(Age, fill = Island)) +
+  geom_histogram(binwidth = 3, color = "white") +
+  facet_wrap(~Island, ncol = 1) +
+  theme(legend.position = "none")
+```
+
+```{r}
+df_people %>%
+  ggplot(aes(n_relationships, fill = Island)) +
+  geom_bar() +
+  scale_x_continuous(breaks = scales::breaks_width(1)) +
+  facet_grid(Island ~ .)
+```
+
+```{r}
+df_short_rel <- df %>%
+  filter(!is.na(relationship_length)) %>%
+  mutate(short_rel = relationship_length < 1) %>%
+  group_by(Island) %>%
+  summarise(prop_short = mean(short_rel), n = n())
+
+df_short_rel %>%
+  ggplot(aes(Island, prop_short, fill = Island)) +
+  geom_col() +
+  geom_text(aes(label = paste0("n=", n)), vjust = -0.5) +
+  scale_y_continuous(labels = scales::percent, limits = c(0, 1)) +
+  labs(title = "Proportion of relationships lasting less than 1 year",
+       x = NULL, y = "Percent") +
+  theme(legend.position = "none")
+```
+
+```{r}
+df_people |>
+  group_by(age_group) %>%
+  summarize(avg_relationships = mean(n_relationships)) %>%
+  ggplot(aes(x = age_group, y = avg_relationships)) +
+  geom_col() +
+  labs(
+    x = "Age group",
+    y = "Average number of relationships",
+)
+```
+
+```{r}
+df_people %>%
+  # filter(island == "Providence") |> 
+  ggplot(aes(x = Age, y = n_relationships, color = Island)) +
+  geom_point() +
+  facet_wrap(~Island) +
+  labs(
+    x = "Age",
+    y = "Number of relationships",
+    color = "Island"
+  )
+```
+
+```{r}
+df_people |> 
+  group_by(age_group) |> 
+  summarize(
+    n_married = sum(ever_married),
+    n_total = n()
+  ) |> 
+  mutate(p_married = n_married / n_total)
+
+df_people %>%
+  group_by(age_group, Island) %>%
+  summarize(
+    n_married = sum(ever_married),
+    n_total = n(),
+    .groups = "drop"
+  ) %>%
+  mutate(p_married = n_married / n_total) %>%
+  ggplot(aes(x = age_group, y = p_married, fill = Island)) +
+  geom_col(position = "dodge") +
+  labs(x = "Age group", y = "percent married", fill = "Island")
+
+
+df_people  %>%
+  filter(birth_island %in% c("Bonne Sante", "Providence", "Ironbard"))  %>%
+  group_by(age_group, birth_island) %>%
+  summarize(
+    n_married = sum(ever_married),
+    n_total = n(),
+    .groups = "drop"
+  ) %>%
+  mutate(p_married = n_married / n_total) %>%
+  ggplot(aes(x = age_group, y = p_married, fill = birth_island)) +
+  geom_col(position = "dodge") +
+  labs(x = "Age group", y = "percent married", fill = "Birth Island")
+```
+
+```{r}
+df %>%
+  filter(!is.na(relationship_length)) %>%
+  ggplot(aes(relationship_length, fill = Island)) +
+  geom_histogram(bins = 10, color = "white") +
+  scale_x_log10() +
+  facet_wrap(~Island, ncol = 1, scales = "free_y") +
+  theme(legend.position = "none")
+```
+
+```{r}
+df |>
+  filter(
+    !is.na(Married),
+    birth_island %in% c("Bonne Sante", "Ironbard", "Providence")
+  ) |>
+  ggplot(aes(relationship_length)) +
+  geom_histogram(bins = 20) +
+  facet_grid(Married ~ Island) +
+  scale_x_log10()
+```
+
 ### **q3** Key Analyses
 
 Present the key analyses that support your questions / hypotheses. This could include summary statistics (e.g., a proportion of Islanders), grouped summary statistics (e.g., a proportion for group A, and for group B), or visualizations (e.g., a histogram). This section should be short, and every analysis should directly relate to q4.
