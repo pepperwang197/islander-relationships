@@ -98,7 +98,7 @@ The Islands allows you to ask islanders to complete tasks. If you just take meas
 Conduct an EDA on your data. Add as many code chunks as you need. Ensure your EDA gives enough context of the data for us to understand what comes next in this report.
 
 ```{r}
-df_islanders <- read_csv("Data_Science_Islanders_Study_-_MAIN_SHEET.csv")
+ df_islanders <- read_csv("Islanders_Data.csv")
 
 df_clean <-
   df_islanders %>%
@@ -124,11 +124,123 @@ glimpse(df_clean)
 df_people <-
   df_clean %>%
   distinct(name, age, house, city, island, birth_island, moved)
+
+df_rel <-
+  df_clean %>%
+  group_by(name, age, house, city, island, birth_island, moved) %>%
+  summarize(
+    n_relationships = n(),
+    ever_married = "yes" %in% married,
+    .groups = "drop"
+  ) %>%
+  mutate(
+    age_group = case_when(
+      age <= 30 ~ "18-30",
+      age <= 45 ~ "31-45",
+      age <= 60 ~ "46-60",
+      TRUE ~ "61+"
+    )
+  )
+
+summary (df_people)
+
+
+
 ```
 
 ### **q3** Key Analyses
 
 Present the key analyses that support your questions / hypotheses. This could include summary statistics (e.g., a proportion of Islanders), grouped summary statistics (e.g., a proportion for group A, and for group B), or visualizations (e.g., a histogram). This section should be short, and every analysis should directly relate to q4.
+
+```{r}
+df_rel %>%
+  ggplot(aes(x = ever_married, y = age)) +
+  geom_boxplot() +
+  labs(x = "Ever married", y = "Age")
+```
+
+```{r}
+
+```
+
+```{r}
+df_rel %>%
+  group_by(age_group) %>%
+  summarize(avg_relationships = mean(n_relationships)) %>%
+  ggplot(aes(x = age_group, y = avg_relationships)) +
+  geom_col() +
+  labs(
+    x = "Age group",
+    y = "Average number of relationships",
+)
+#smallr binds
+```
+
+```{r}
+df_rel %>%
+  # filter(island == "Providence") |> 
+  ggplot(aes(x = age, y = n_relationships, color = island)) +
+  geom_point() +
+  geom_smooth(
+    method=lm,
+    mapping = aes(fill = island)
+  ) +
+  facet_wrap(~island) +
+  labs(
+    x = "Age",
+    y = "Number of relationships",
+    color = "Island"
+  )
+```
+
+```{r}
+df_rel |> 
+  group_by(age_group) |> 
+  summarize(
+    n_married = sum(ever_married),
+    n_total = n()
+  ) |> 
+  mutate(p_married = n_married / n_total)
+
+df_rel %>%
+  group_by(age_group, island) %>%
+  summarize(
+    n_married = sum(ever_married),
+    n_total = n(),
+    .groups = "drop"
+  ) %>%
+  mutate(p_married = n_married / n_total) %>%
+  ggplot(aes(x = age_group, y = p_married, fill = island)) +
+  geom_col(position = "dodge") +
+  labs(x = "Age group", y = "percent married", fill = "Island")
+
+
+df_rel  %>%
+  filter(birth_island != "Buyan")  %>%
+  group_by(age_group, birth_island) %>%
+  summarize(
+    n_married = sum(ever_married),
+    n_total = n(),
+    .groups = "drop"
+  ) %>%
+  mutate(p_married = n_married / n_total) %>%
+  ggplot(aes(x = age_group, y = p_married, fill = birth_island)) +
+  geom_col(position = "dodge") +
+  labs(x = "Age group", y = "percent married", fill = "Birth Island")
+
+df_rel  %>%
+  filter(birth_island != "Buyan")  %>%
+  group_by(age_group, moved) %>%
+  summarize(
+    n_married = sum(ever_married),
+    n_total = n(),
+    .groups = "drop"
+  ) %>%
+  mutate(p_married = n_married / n_total) %>%
+  ggplot(aes(x = age_group, y = p_married, fill = moved)) +
+  geom_col(position = "dodge") +
+  labs(x = "Age group", y = "percent married", fill = "moved")
+```
 
 ### **q4** Answers
 
