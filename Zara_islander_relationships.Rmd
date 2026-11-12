@@ -1,0 +1,95 @@
+---
+title: "Zara - islander relationships"
+author: "Zara Coakley"
+date: "2026-11-12"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(tidyverse)
+
+df_raw <- read_csv("~/Documents/Data Science/data-science-FA26/challenges/data/c10 Islanders Study - Zara.csv")
+```
+
+```{r}
+df <- df_raw %>%
+  rename(
+    birth_island = `Birth island`,
+    relationship_length = `Relationship Length`
+  ) %>%
+  mutate(
+    relationship_length = case_when(
+      relationship_length == "none" ~ NA_real_,
+      relationship_length == "<1" ~ 0.5, # so it shows up on a numerical axis
+      TRUE ~ as.numeric(relationship_length)
+    ),
+    Married = Married == "yes" | Married == "Yes"
+  )
+
+df_people <- df %>%
+  group_by(Name, Age, House, City, Island) %>%
+  summarise(
+    n_relationships = sum(!is.na(relationship_length)),
+    ever_married = any(Married),
+    .groups = "drop"
+  )
+```
+
+Age distribution on each island
+
+```{r}
+df %>%
+  ggplot(aes(Age, fill = Island)) +
+  geom_histogram(binwidth = 5, color = "white") +
+  facet_wrap(~Island, ncol = 1) +
+  theme(legend.position = "none")
+```
+
+Number of relationships islanders have been in
+
+```{r}
+df_people %>%
+  ggplot(aes(n_relationships, fill = Island)) +
+  geom_bar(position = "dodge") +
+  scale_x_continuous(breaks = scales::breaks_width(1))
+```
+
+Relationship length histogram by island
+
+```{r}
+df %>%
+  filter(!is.na(relationship_length)) %>%
+  ggplot(aes(relationship_length, fill = Island)) +
+  geom_histogram(bins = 30, color = "white") +
+  scale_x_log10() +
+  facet_wrap(~Island, ncol = 1, scales = "free_y") +
+  theme(legend.position = "none")
+```
+
+```{r}
+df %>%
+  filter(!is.na(relationship_length)) %>%
+  mutate(short_rel = relationship_length < 1) %>%
+  group_by(Island) %>%
+  summarise(prop_short = mean(short_rel), n = n()) %>%
+  ggplot(aes(Island, prop_short, fill = Island)) +
+  geom_col() +
+  geom_text(aes(label = paste0("n=", n)), vjust = -0.5) +
+  scale_y_continuous(labels = scales::percent, limits = c(0, 1)) +
+  labs(title = "Proportion of relationships lasting less than 1 year",
+       x = NULL, y = "Percent") +
+  theme(legend.position = "none")
+```
+
+```{r}
+df %>%
+  filter(!is.na(relationship_length)) %>%
+  ggplot(aes(Age, relationship_length, color = Married)) +
+  geom_point(alpha = 0.5) +
+  facet_wrap(~Island) +
+  labs(title = "Relationship length vs. age")
+```
