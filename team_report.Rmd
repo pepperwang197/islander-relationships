@@ -46,13 +46,6 @@ Make sure to commit both the challenge report (`report.md` file) and supporting 
 
 <!-- ----------------------------------------------------------------------- -->
 
-```{r setup}
-library(tidyverse)
-library(rsample)
-
-# TODO: Include any other packages you need
-```
-
 ### **q1** Planning a study (TEAMWORK)
 
 While you provided this plan in c08 (Part 1), please include your plan here. In particular, describe how you updated your plan in response to feedback.
@@ -78,6 +71,8 @@ While you provided this plan in c08 (Part 1), please include your plan here. In 
 #### Question / Hypothesis
 
 - How do dating and marriage histories vary across islands?
+- Null hypothesis: There is no difference in dating patterns between islands.
+- Alternative hypothesis: There are differences in dating (such as relationship lengths, number of relationships, etc) between different islands.
 
 #### Sampling plan
 
@@ -114,105 +109,91 @@ While you provided this plan in c08 (Part 1), please include your plan here. In 
 
 ### **q2** EDA
 
-```{r}
+```{r imports}
 library(tidyverse)
 df_raw <- read_csv("./data/main_sheet.csv")
 ```
 
-```{r}
-
-days_per_year <- 28  # A year is 28 days not 365
-
-convert_length <- function(x) {
-  m <- str_match(x, "(\\d+)\\+?\\s*(day|year)")
-  num  <- as.numeric(m[, 2]) # pull out the number
-  unit <- m[, 3] # pull out the unit (day or year)
-  
-  years <- case_when(
-    unit == "day" ~ floor(num / days_per_year),
-    unit == "year" ~ num
-  )
-  
-  case_when(
-    is.na(unit) ~ x, # don't change entries that are already just a number or <1
-    unit == "day" & years < 1 ~ "<1",
-    TRUE ~ as.character(years)
-  )
-}
-
+```{r data-cleaning}
 df <- df_raw %>%
   rename(
-    birth_island = `Birth island`,
-    relationship_length = `Relationship Length`
+    name = "Name",
+    age = "Age",
+    house = "House",
+    city = "City",
+    island = "Island",
+    birth_island = "Birth island",
+    relationship_length = "Relationship Length",
+    married = "Married"
   ) %>%
   mutate(
-    relationship_length = convert_length(relationship_length),
     relationship_length = case_when(
       relationship_length == "none" ~ NA_real_,
       relationship_length == "<1" ~ 0.5, # so it shows up on a numerical axis
       TRUE ~ as.numeric(relationship_length)
     ),
-    Married = Married == "yes" | Married == "Yes",
-    Island = case_when(
-      Island == "Bonne Santé" ~ "Bonne Sante",
-      TRUE ~ Island
+    married = married == "yes" | married == "Yes",
+    island = case_when(
+      island == "Bonne Santé" ~ "Bonne Sante",
+      TRUE ~ island
     )
   )
 
 df_people <- df %>%
-  group_by(Name, Age, House, City, Island, birth_island) %>%
+  group_by(name, age, house, city, island, birth_island) %>%
   summarise(
     n_relationships = sum(!is.na(relationship_length)),
-    ever_married = any(Married),
+    ever_married = any(married),
     .groups = "drop"
-  ) |> mutate(
+  ) %>%
+  mutate(
     age_group = case_when(
-      Age <= 30 ~ "18-30",
-      Age <= 45 ~ "31-45",
-      Age <= 60 ~ "46-60",
+      age <= 30 ~ "18-30",
+      age <= 45 ~ "31-45",
+      age <= 60 ~ "46-60",
       TRUE ~ "61+"
     )
   )
-
-df_people
-
 ```
 
-```{r}
+```{r plot-1}
 df %>%
-  ggplot(aes(Age, fill = Island)) +
+  ggplot(aes(age, fill = island)) +
   geom_histogram(binwidth = 3, color = "white") +
-  facet_wrap(~Island, ncol = 1) +
+  facet_wrap(~island, ncol = 1) +
   theme(legend.position = "none")
 ```
 
-```{r}
+```{r plot-2}
 df_people %>%
-  ggplot(aes(n_relationships, fill = Island)) +
+  ggplot(aes(n_relationships, fill = island)) +
   geom_bar() +
   scale_x_continuous(breaks = scales::breaks_width(1)) +
-  facet_grid(Island ~ .)
+  facet_grid(island ~ .)
 ```
 
-```{r}
+```{r plot-3}
 df_short_rel <- df %>%
   filter(!is.na(relationship_length)) %>%
   mutate(short_rel = relationship_length < 1) %>%
-  group_by(Island) %>%
+  group_by(island) %>%
   summarise(prop_short = mean(short_rel), n = n())
 
 df_short_rel %>%
-  ggplot(aes(Island, prop_short, fill = Island)) +
+  ggplot(aes(island, prop_short, fill = island)) +
   geom_col() +
   geom_text(aes(label = paste0("n=", n)), vjust = -0.5) +
   scale_y_continuous(labels = scales::percent, limits = c(0, 1)) +
-  labs(title = "Proportion of relationships lasting less than 1 year",
-       x = NULL, y = "Percent") +
+  labs(
+    title = "Proportion of relationships lasting less than 1 year",
+    x = NULL,
+    y = "Percent"
+  ) +
   theme(legend.position = "none")
 ```
 
-```{r}
-df_people |>
+```{r plot-4}
+df_people %>%
   group_by(age_group) %>%
   summarize(avg_relationships = mean(n_relationships)) %>%
   ggplot(aes(x = age_group, y = avg_relationships)) +
@@ -220,15 +201,14 @@ df_people |>
   labs(
     x = "Age group",
     y = "Average number of relationships",
-)
+  )
 ```
 
-```{r}
+```{r plot-5}
 df_people %>%
-  # filter(island == "Providence") |> 
-  ggplot(aes(x = Age, y = n_relationships, color = Island)) +
+  ggplot(aes(x = age, y = n_relationships, color = island)) +
   geom_point() +
-  facet_wrap(~Island) +
+  facet_wrap(~island) +
   labs(
     x = "Age",
     y = "Number of relationships",
@@ -236,24 +216,24 @@ df_people %>%
   )
 ```
 
-```{r}
-df_people |> 
-  group_by(age_group) |> 
+```{r plot-6}
+df_people %>%
+  group_by(age_group) %>% 
   summarize(
     n_married = sum(ever_married),
     n_total = n()
-  ) |> 
+  ) %>% 
   mutate(p_married = n_married / n_total)
 
 df_people %>%
-  group_by(age_group, Island) %>%
+  group_by(age_group, island) %>%
   summarize(
     n_married = sum(ever_married),
     n_total = n(),
     .groups = "drop"
   ) %>%
   mutate(p_married = n_married / n_total) %>%
-  ggplot(aes(x = age_group, y = p_married, fill = Island)) +
+  ggplot(aes(x = age_group, y = p_married, fill = island)) +
   geom_col(position = "dodge") +
   labs(x = "Age group", y = "percent married", fill = "Island")
 
@@ -272,25 +252,25 @@ df_people  %>%
   labs(x = "Age group", y = "percent married", fill = "Birth Island")
 ```
 
-```{r}
+```{r plot-7}
 df %>%
   filter(!is.na(relationship_length)) %>%
-  ggplot(aes(relationship_length, fill = Island)) +
+  ggplot(aes(relationship_length, fill = island)) +
   geom_histogram(bins = 10, color = "white") +
   scale_x_log10() +
-  facet_wrap(~Island, ncol = 1, scales = "free_y") +
+  facet_wrap(~island, ncol = 1, scales = "free_y") +
   theme(legend.position = "none")
 ```
 
-```{r}
-df |>
+```{r plot-8}
+df %>%
   filter(
-    !is.na(Married),
+    !is.na(married),
     birth_island %in% c("Bonne Sante", "Ironbard", "Providence")
-  ) |>
+  ) %>%
   ggplot(aes(relationship_length)) +
   geom_histogram(bins = 20) +
-  facet_grid(Married ~ Island) +
+  facet_grid(married ~ island) +
   scale_x_log10()
 ```
 
@@ -298,10 +278,85 @@ df |>
 
 Present the key analyses that support your questions / hypotheses. This could include summary statistics (e.g., a proportion of Islanders), grouped summary statistics (e.g., a proportion for group A, and for group B), or visualizations (e.g., a histogram). This section should be short, and every analysis should directly relate to q4.
 
+```{r final-plot-1}
+df_people %>%
+  ggplot(aes(n_relationships, fill = island)) +
+  geom_bar() +
+  scale_x_continuous(breaks = scales::breaks_width(1)) +
+  facet_grid(island ~ .)
+```
+
+This is a histogram of the number of relationships islanders have been in in their life, separated by the island they live on. The x axis indicates how many relationships islanders have been in, and the y axis indicates how many islanders have had each number of relationships. There does not appear to be any difference between the islands in how many relationships islanders have been in.
+
+```{r final-plot-2}
+df %>%
+  filter(
+    !is.na(married),
+    birth_island %in% c("Bonne Sante", "Ironbard", "Providence")
+  ) %>%
+  ggplot(aes(relationship_length)) +
+  geom_histogram(bins = 20) +
+  facet_grid(married ~ island) +
+  scale_x_log10()
+```
+
+This graph shows the number of relationships of different lengths, separated by island and by whether they were marriages. Of the relationships that were not marriages, there are a large amount that lasted less than 1 year. There are very few relationships lasting more than 10 years that did not get married. Of the relationships that were marriages, most of them lasted more than 10 years. There seems to be no clear difference between the 3 islands, besides that Bonne Sante had fewer relationships that lasted less than 1 year, but that may be because of our small sample size.
+
+```{r final-plot-3}
+df_people %>%
+  group_by(age_group) %>% 
+  summarize(
+    n_married = sum(ever_married),
+    n_total = n()
+  ) %>% 
+  mutate(p_married = n_married / n_total)
+
+df_people %>%
+  group_by(age_group, island) %>%
+  summarize(
+    n_married = sum(ever_married),
+    n_total = n(),
+    .groups = "drop"
+  ) %>%
+  mutate(p_married = n_married / n_total) %>%
+  ggplot(aes(x = age_group, y = p_married, fill = island)) +
+  geom_col(position = "dodge") +
+  labs(x = "Age group", y = "percent married", fill = "Island")
+
+
+df_people  %>%
+  filter(birth_island %in% c("Bonne Sante", "Providence", "Ironbard"))  %>%
+  group_by(age_group, birth_island) %>%
+  summarize(
+    n_married = sum(ever_married),
+    n_total = n(),
+    .groups = "drop"
+  ) %>%
+  mutate(p_married = n_married / n_total) %>%
+  ggplot(aes(x = age_group, y = p_married, fill = birth_island)) +
+  geom_col(position = "dodge") +
+  labs(x = "Age group", y = "percent married", fill = "Birth Island")
+```
+
+These graphs explore the marriage rates for each age group (18-30, 31-45, 46-60, 61+), and then further explore whether trends emerge based on current island (top) and birth island (bottom). The x axis, percent married, is the percentage of people within that age group who have been married at least once. Based on this graphing, it seems as if people in or from Bonne Sante begin marriage earlier. In the current island graph, there is a trend upward with percentage of people in that age group that have been married, with the exception of a decrease in the age group 45-60 in Providence and in 61+ in Ironbard. 
+
+```{r final-plot-4}
+df_people %>%
+  ggplot(aes(x = age, y = n_relationships, color = island)) +
+  geom_point() +
+  facet_wrap(~island) +
+  labs(
+    x = "Age",
+    y = "Number of relationships",
+    color = "Island"
+  )
+```
+
+This graph plots the current ages of islanders versus the total number of relationships they’ve been in. We had expected an upward trend because we thought that people who are older would have had more time to date throughout their lives. However, the data seems to show otherwise. The values are relatively evenly scattered across ages, with the highest numbers roughly around their 40s. This is mostly consistent across islands.
+
 ### **q4** Answers
 
 Connect your Key Analyses to your questions / hypotheses. What did you conclude from your study?
 
-- No difference between islands
-
-- No trend of older people having more relationships. This is because we only sampled people over 18, and most islanders appear to have the majority of their relationships before they are 18.
+- In this study, we did not reject the null hypothesis: we did not find any notable differences in dating patterns between islands. 
+- There is no trend of older people having more past relationships (which is what we expected). This is because we only sampled people over 18, and most islanders appear to have the majority of their relationships before they are 18.

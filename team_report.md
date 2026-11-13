@@ -1,0 +1,571 @@
+The Islands, Part 2: Study
+================
+Zara, Pepper, Lea, Amia
+2026-11-11
+
+- [Grading Rubric](#grading-rubric)
+  - [Individual](#individual)
+  - [Submission](#submission)
+- [Setup](#setup)
+  - [**q1** Planning a study (TEAMWORK)](#q1-planning-a-study-teamwork)
+  - [**q2** EDA](#q2-eda)
+  - [**q3** Key Analyses](#q3-key-analyses)
+  - [**q4** Answers](#q4-answers)
+
+*Purpose*: This is part 2 of 2. In part 1 you *planed* your statistical
+project, particularly your data collection. In this part you will give
+updates on your plan, and report your findings.
+
+This challenge is deliberately shorter so you have time to collect and
+analyze your data.
+
+*Important note*: While we expect that you did your data collection with
+your team, you need to complete your own individual report for c10.
+
+<!-- include-rubric -->
+
+# Grading Rubric
+
+<!-- -------------------------------------------------- -->
+
+Unlike exercises, **challenges will be graded**. The following rubrics
+define how you will be graded, both on an individual and team basis.
+
+## Individual
+
+<!-- ------------------------- -->
+
+| Category | Needs Improvement | Satisfactory |
+|----|----|----|
+| Effort | Some task **q**’s left unattempted | All task **q**’s attempted |
+| Observed | Did not document observations, or observations incorrect | Documented correct observations based on analysis |
+| Supported | Some observations not clearly supported by analysis | All observations clearly supported by analysis (table, graph, etc.) |
+| Assessed | Observations include claims not supported by the data, or reflect a level of certainty not warranted by the data | Observations are appropriately qualified by the quality & relevance of the data and (in)conclusiveness of the support |
+| Specified | Uses the phrase “more data are necessary” without clarification | Any statement that “more data are necessary” specifies which *specific* data are needed to answer what *specific* question |
+| Code Styled | Violations of the [style guide](https://style.tidyverse.org/) hinder readability | Code sufficiently close to the [style guide](https://style.tidyverse.org/) |
+
+## Submission
+
+<!-- ------------------------- -->
+
+Make sure to commit both the challenge report (`report.md` file) and
+supporting files (`report_files/` folder) when you are done! Then submit
+a link to Canvas. **Your Challenge submission is not complete without
+all files uploaded to GitHub.**
+
+# Setup
+
+<!-- ----------------------------------------------------------------------- -->
+
+### **q1** Planning a study (TEAMWORK)
+
+While you provided this plan in c08 (Part 1), please include your plan
+here. In particular, describe how you updated your plan in response to
+feedback.
+
+#### Population
+
+- Our population is all adult islanders (age 18+). However, we will only
+  be randomly selecting islanders from a total of 12 cities across the
+  three islands.
+
+#### Quantity of interest
+
+- We are going to examine people’s relationship histories across the
+  three islands. In particular, we are measuring the number of
+  relationships islanders have been in (only looking at relationships
+  they have had when they were 18+), length of relationships, and
+  whether they got married.
+
+#### Covariates
+
+- The age of the person (if they are older, they have had more time to
+  be in relationships). We can control for this by calculating a
+  relationships/year variable.
+- The population size of each island and each city could affect the
+  relationships islanders get into.
+- One thing we have to consider is that islanders may move between the
+  islands. We are assuming this will happen infrequently, and we will
+  just count an islander who has moved as living on the island they are
+  currently living on.
+
+#### Observation or experiment?
+
+- Observational study.
+
+#### Question / Hypothesis
+
+- How do dating and marriage histories vary across islands?
+- Null hypothesis: There is no difference in dating patterns between
+  islands.
+- Alternative hypothesis: There are differences in dating (such as
+  relationship lengths, number of relationships, etc) between different
+  islands.
+
+#### Sampling plan
+
+- We will assign each of our four team members one city from each
+  island, and from each city each team member will collect data on ten
+  people. In total, this will result in a sample of 40 people from each
+  island and 120 people total from all islands.
+
+- Within each city, we will generate 10 random numbers to choose the
+  household that we collect data from. If a house has multiple people
+  that are 18+ years old, we will randomly choose one person from the
+  household to sample. If the house has no residents 18+, we will
+  randomly select a new one.
+
+- In each house, we will collect the number of relationships, how long
+  they lasted, and whether they got married or not.
+
+- Within our data collection spreadsheet, we will have one row per
+  relationship. This means one individual may have several rows. We
+  chose to do it this way so that each row has the same number of
+  columns, as opposed to having one row per islander in which case we
+  would need a column for each relationship they are in resulting in
+  each row having a variable number of columns.
+
+- The columns will be: Name, Age, House, City, Island, Birth island,
+  Relationships, Married
+
+- We’re trying to make it more representative of the general population
+  by doing random sampling, plus taking samples across cities adds more
+  diversity as well. Of course, we can’t make it perfectly
+  representative, since it’s a limited number of people and cities, but
+  we’re trying to ensure diversity.
+
+- Choice of sample size: 157
+
+  (Feasibility) We thought 40 people per island, which is 30 people per
+  students and 120 total would be a reasonable amount of islanders to
+  sample in terms of having a reasonable number of people for each
+  student to go through. A larger sample would probably give us more
+  precise results, but would also take longer.
+
+    
+  (Power analysis) We performed a power analysis using the site ZDR
+  showed in class
+  ([https://www.statscalculators.com/calculators/hypothesis-testing/sample-size-and-power-analysis-calculator).](https://www.statscalculators.com/calculators/hypothesis-testing/sample-size-and-power-analysis-calculator).)
+  The study design we chose was comparing several group means because we
+  are comparing characteristics of islanders from three different
+  islands.
+
+  Here are our parameter choices:
+
+  - Significance level (α) = 0.05: This is a standard choice for
+    confidence level. There are no particular reasons we would need a
+    higher confidence level for this study.
+
+  - Target power = 0.8: Also a standard choice. There is no reason that
+    missing a difference between the islands would be costly, so we
+    don’t need to have a higher target power than the standard.
+
+  - Cohen’s f = 0.25: This is difficult to justify because we don’t have
+    prior data on how large the effect of living on different islands is
+    on people’s relationship histories within the Islands simulation.
+    However, 0.5 corresponds to being able to detect a “medium”
+    difference according to Cohen’s benchmarks, which seems like a
+    reasonable target for our study since it is just meant to explore
+    differences between the islanders.
+
+  This power analysis resulted in requiring 159 observations for our
+  study. That is just under 40 observations per student, which is a
+  little bit over our original plan of 30 observations per student, but
+  it’s not much more. 
+
+  Taking both the feasibility and power analysis into consideration, we
+  decided on a final sample size of 159. With this sample size, our
+  study should be able to detect a “medium” sized difference between the
+  relationship histories of islanders, and it will be a reasonable
+  amount of work for our team to do.
+
+### **q2** EDA
+
+``` r
+library(tidyverse)
+```
+
+    ## ── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+    ## ✔ dplyr     1.2.1     ✔ readr     2.2.0
+    ## ✔ forcats   1.0.1     ✔ stringr   1.6.0
+    ## ✔ ggplot2   4.0.3     ✔ tibble    3.3.1
+    ## ✔ lubridate 1.9.5     ✔ tidyr     1.3.2
+    ## ✔ purrr     1.2.2     
+    ## ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+    ## ✖ dplyr::filter() masks stats::filter()
+    ## ✖ dplyr::lag()    masks stats::lag()
+    ## ℹ Use the conflicted package (<http://conflicted.r-lib.org/>) to force all conflicts to become errors
+
+``` r
+df_raw <- read_csv("./data/main_sheet.csv")
+```
+
+    ## Rows: 550 Columns: 8
+    ## ── Column specification ────────────────────────────────────────────────────────
+    ## Delimiter: ","
+    ## chr (6): Name, City, Island, Birth island, Relationship Length, Married
+    ## dbl (2): Age, House
+    ## 
+    ## ℹ Use `spec()` to retrieve the full column specification for this data.
+    ## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+
+``` r
+df <- df_raw %>%
+  rename(
+    name = "Name",
+    age = "Age",
+    house = "House",
+    city = "City",
+    island = "Island",
+    birth_island = "Birth island",
+    relationship_length = "Relationship Length",
+    married = "Married"
+  ) %>%
+  mutate(
+    relationship_length = case_when(
+      relationship_length == "none" ~ NA_real_,
+      relationship_length == "<1" ~ 0.5, # so it shows up on a numerical axis
+      TRUE ~ as.numeric(relationship_length)
+    ),
+    married = married == "yes" | married == "Yes",
+    island = case_when(
+      island == "Bonne Santé" ~ "Bonne Sante",
+      TRUE ~ island
+    )
+  )
+```
+
+    ## Warning: There was 1 warning in `mutate()`.
+    ## ℹ In argument: `relationship_length = case_when(...)`.
+    ## Caused by warning:
+    ## ! NAs introduced by coercion
+
+``` r
+df_people <- df %>%
+  group_by(name, age, house, city, island, birth_island) %>%
+  summarise(
+    n_relationships = sum(!is.na(relationship_length)),
+    ever_married = any(married),
+    .groups = "drop"
+  ) %>%
+  mutate(
+    age_group = case_when(
+      age <= 30 ~ "18-30",
+      age <= 45 ~ "31-45",
+      age <= 60 ~ "46-60",
+      TRUE ~ "61+"
+    )
+  )
+```
+
+``` r
+df %>%
+  ggplot(aes(age, fill = island)) +
+  geom_histogram(binwidth = 3, color = "white") +
+  facet_wrap(~island, ncol = 1) +
+  theme(legend.position = "none")
+```
+
+![](team_report_files/figure-gfm/plot-1-1.png)<!-- -->
+
+``` r
+df_people %>%
+  ggplot(aes(n_relationships, fill = island)) +
+  geom_bar() +
+  scale_x_continuous(breaks = scales::breaks_width(1)) +
+  facet_grid(island ~ .)
+```
+
+![](team_report_files/figure-gfm/plot-2-1.png)<!-- -->
+
+``` r
+df_short_rel <- df %>%
+  filter(!is.na(relationship_length)) %>%
+  mutate(short_rel = relationship_length < 1) %>%
+  group_by(island) %>%
+  summarise(prop_short = mean(short_rel), n = n())
+
+df_short_rel %>%
+  ggplot(aes(island, prop_short, fill = island)) +
+  geom_col() +
+  geom_text(aes(label = paste0("n=", n)), vjust = -0.5) +
+  scale_y_continuous(labels = scales::percent, limits = c(0, 1)) +
+  labs(
+    title = "Proportion of relationships lasting less than 1 year",
+    x = NULL,
+    y = "Percent"
+  ) +
+  theme(legend.position = "none")
+```
+
+![](team_report_files/figure-gfm/plot-3-1.png)<!-- -->
+
+``` r
+df_people %>%
+  group_by(age_group) %>%
+  summarize(avg_relationships = mean(n_relationships)) %>%
+  ggplot(aes(x = age_group, y = avg_relationships)) +
+  geom_col() +
+  labs(
+    x = "Age group",
+    y = "Average number of relationships",
+  )
+```
+
+![](team_report_files/figure-gfm/plot-4-1.png)<!-- -->
+
+``` r
+df_people %>%
+  ggplot(aes(x = age, y = n_relationships, color = island)) +
+  geom_point() +
+  facet_wrap(~island) +
+  labs(
+    x = "Age",
+    y = "Number of relationships",
+    color = "Island"
+  )
+```
+
+![](team_report_files/figure-gfm/plot-5-1.png)<!-- -->
+
+``` r
+df_people %>%
+  group_by(age_group) %>% 
+  summarize(
+    n_married = sum(ever_married),
+    n_total = n()
+  ) %>% 
+  mutate(p_married = n_married / n_total)
+```
+
+    ## # A tibble: 4 × 4
+    ##   age_group n_married n_total p_married
+    ##   <chr>         <int>   <int>     <dbl>
+    ## 1 18-30            17      37     0.459
+    ## 2 31-45            36      47     0.766
+    ## 3 46-60            25      31     0.806
+    ## 4 61+              NA      19    NA
+
+``` r
+df_people %>%
+  group_by(age_group, island) %>%
+  summarize(
+    n_married = sum(ever_married),
+    n_total = n(),
+    .groups = "drop"
+  ) %>%
+  mutate(p_married = n_married / n_total) %>%
+  ggplot(aes(x = age_group, y = p_married, fill = island)) +
+  geom_col(position = "dodge") +
+  labs(x = "Age group", y = "percent married", fill = "Island")
+```
+
+    ## Warning: Removed 1 row containing missing values or values outside the scale range
+    ## (`geom_col()`).
+
+![](team_report_files/figure-gfm/plot-6-1.png)<!-- -->
+
+``` r
+df_people  %>%
+  filter(birth_island %in% c("Bonne Sante", "Providence", "Ironbard"))  %>%
+  group_by(age_group, birth_island) %>%
+  summarize(
+    n_married = sum(ever_married),
+    n_total = n(),
+    .groups = "drop"
+  ) %>%
+  mutate(p_married = n_married / n_total) %>%
+  ggplot(aes(x = age_group, y = p_married, fill = birth_island)) +
+  geom_col(position = "dodge") +
+  labs(x = "Age group", y = "percent married", fill = "Birth Island")
+```
+
+![](team_report_files/figure-gfm/plot-6-2.png)<!-- -->
+
+``` r
+df %>%
+  filter(!is.na(relationship_length)) %>%
+  ggplot(aes(relationship_length, fill = island)) +
+  geom_histogram(bins = 10, color = "white") +
+  scale_x_log10() +
+  facet_wrap(~island, ncol = 1, scales = "free_y") +
+  theme(legend.position = "none")
+```
+
+    ## Warning in scale_x_log10(): log-10 transformation introduced infinite values.
+
+    ## Warning: Removed 1 row containing non-finite outside the scale range
+    ## (`stat_bin()`).
+
+![](team_report_files/figure-gfm/plot-7-1.png)<!-- -->
+
+``` r
+df %>%
+  filter(
+    !is.na(married),
+    birth_island %in% c("Bonne Sante", "Ironbard", "Providence")
+  ) %>%
+  ggplot(aes(relationship_length)) +
+  geom_histogram(bins = 20) +
+  facet_grid(married ~ island) +
+  scale_x_log10()
+```
+
+    ## Warning in scale_x_log10(): log-10 transformation introduced infinite values.
+
+    ## Warning: Removed 3 rows containing non-finite outside the scale range
+    ## (`stat_bin()`).
+
+![](team_report_files/figure-gfm/plot-8-1.png)<!-- -->
+
+### **q3** Key Analyses
+
+Present the key analyses that support your questions / hypotheses. This
+could include summary statistics (e.g., a proportion of Islanders),
+grouped summary statistics (e.g., a proportion for group A, and for
+group B), or visualizations (e.g., a histogram). This section should be
+short, and every analysis should directly relate to q4.
+
+``` r
+df_people %>%
+  ggplot(aes(n_relationships, fill = island)) +
+  geom_bar() +
+  scale_x_continuous(breaks = scales::breaks_width(1)) +
+  facet_grid(island ~ .)
+```
+
+![](team_report_files/figure-gfm/final-plot-1-1.png)<!-- -->
+
+This is a histogram of the number of relationships islanders have been
+in in their life, separated by the island they live on. The x axis
+indicates how many relationships islanders have been in, and the y axis
+indicates how many islanders have had each number of relationships.
+There does not appear to be any difference between the islands in how
+many relationships islanders have been in.
+
+``` r
+df %>%
+  filter(
+    !is.na(married),
+    birth_island %in% c("Bonne Sante", "Ironbard", "Providence")
+  ) %>%
+  ggplot(aes(relationship_length)) +
+  geom_histogram(bins = 20) +
+  facet_grid(married ~ island) +
+  scale_x_log10()
+```
+
+    ## Warning in scale_x_log10(): log-10 transformation introduced infinite values.
+
+    ## Warning: Removed 3 rows containing non-finite outside the scale range
+    ## (`stat_bin()`).
+
+![](team_report_files/figure-gfm/final-plot-2-1.png)<!-- -->
+
+This graph shows the number of relationships of different lengths,
+separated by island and by whether they were marriages. Of the
+relationships that were not marriages, there are a large amount that
+lasted less than 1 year. There are very few relationships lasting more
+than 10 years that did not get married. Of the relationships that were
+marriages, most of them lasted more than 10 years. There seems to be no
+clear difference between the 3 islands, besides that Bonne Sante had
+fewer relationships that lasted less than 1 year, but that may be
+because of our small sample size.
+
+``` r
+df_people %>%
+  group_by(age_group) %>% 
+  summarize(
+    n_married = sum(ever_married),
+    n_total = n()
+  ) %>% 
+  mutate(p_married = n_married / n_total)
+```
+
+    ## # A tibble: 4 × 4
+    ##   age_group n_married n_total p_married
+    ##   <chr>         <int>   <int>     <dbl>
+    ## 1 18-30            17      37     0.459
+    ## 2 31-45            36      47     0.766
+    ## 3 46-60            25      31     0.806
+    ## 4 61+              NA      19    NA
+
+``` r
+df_people %>%
+  group_by(age_group, island) %>%
+  summarize(
+    n_married = sum(ever_married),
+    n_total = n(),
+    .groups = "drop"
+  ) %>%
+  mutate(p_married = n_married / n_total) %>%
+  ggplot(aes(x = age_group, y = p_married, fill = island)) +
+  geom_col(position = "dodge") +
+  labs(x = "Age group", y = "percent married", fill = "Island")
+```
+
+    ## Warning: Removed 1 row containing missing values or values outside the scale range
+    ## (`geom_col()`).
+
+![](team_report_files/figure-gfm/final-plot-3-1.png)<!-- -->
+
+``` r
+df_people  %>%
+  filter(birth_island %in% c("Bonne Sante", "Providence", "Ironbard"))  %>%
+  group_by(age_group, birth_island) %>%
+  summarize(
+    n_married = sum(ever_married),
+    n_total = n(),
+    .groups = "drop"
+  ) %>%
+  mutate(p_married = n_married / n_total) %>%
+  ggplot(aes(x = age_group, y = p_married, fill = birth_island)) +
+  geom_col(position = "dodge") +
+  labs(x = "Age group", y = "percent married", fill = "Birth Island")
+```
+
+![](team_report_files/figure-gfm/final-plot-3-2.png)<!-- -->
+
+These graphs explore the marriage rates for each age group (18-30,
+31-45, 46-60, 61+), and then further explore whether trends emerge based
+on current island (top) and birth island (bottom). The x axis, percent
+married, is the percentage of people within that age group who have been
+married at least once. Based on this graphing, it seems as if people in
+or from Bonne Sante begin marriage earlier. In the current island graph,
+there is a trend upward with percentage of people in that age group that
+have been married, with the exception of a decrease in the age group
+45-60 in Providence and in 61+ in Ironbard.
+
+``` r
+df_people %>%
+  ggplot(aes(x = age, y = n_relationships, color = island)) +
+  geom_point() +
+  facet_wrap(~island) +
+  labs(
+    x = "Age",
+    y = "Number of relationships",
+    color = "Island"
+  )
+```
+
+![](team_report_files/figure-gfm/final-plot-4-1.png)<!-- -->
+
+This graph plots the current ages of islanders versus the total number
+of relationships they’ve been in. We had expected an upward trend
+because we thought that people who are older would have had more time to
+date throughout their lives. However, the data seems to show otherwise.
+The values are relatively evenly scattered across ages, with the highest
+numbers roughly around their 40s. This is mostly consistent across
+islands.
+
+### **q4** Answers
+
+Connect your Key Analyses to your questions / hypotheses. What did you
+conclude from your study?
+
+- In this study, we did not reject the null hypothesis: we did not find
+  any notable differences in dating patterns between islands.
+- There is no trend of older people having more past relationships
+  (which is what we expected). This is because we only sampled people
+  over 18, and most islanders appear to have the majority of their
+  relationships before they are 18.
